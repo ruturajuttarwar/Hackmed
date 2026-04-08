@@ -1,0 +1,73 @@
+# .github/workflows/daily-commit.yml
+# Copy this file into your repo's .github/workflows/ directory
+
+name: Daily Activity Log
+
+on:
+  schedule:
+    # Runs daily at 9:00 UTC
+    # Adjust to your timezone — cron uses UTC
+    - cron: '0 9 * * *'
+  workflow_dispatch:  # Allow manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  daily-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Create daily log entry
+        run: |
+          mkdir -p .daily
+
+          DATE=$(date "+%Y-%m-%d")
+          WEEKDAY=$(date "+%A")
+          TIMESTAMP=$(date "+%Y-%m-%d %H:%M:%S %Z")
+
+          # Array of tips
+          TIPS=(
+            "Use 'git stash' to temporarily shelve changes."
+            "Write commit messages in the imperative mood."
+            "'git log --oneline --graph' gives a nice visual history."
+            "Prefer small, focused commits over large monolithic ones."
+            "Use 'git reflog' to recover lost commits."
+            "Document the 'why' in comments, not the 'what'."
+            "Take breaks. Your brain solves problems in the background."
+          )
+          DAY_NUM=$(date +%j | sed 's/^0*//')
+          TIP="${TIPS[$((DAY_NUM % ${#TIPS[@]}))]}"
+
+          # Append to log
+          cat >> .daily/log.md <<ENTRY
+
+          ## $WEEKDAY, $DATE
+          - Logged at: $TIMESTAMP
+          - Tip: $TIP
+          ENTRY
+
+          # Update tips file
+          echo "# Today's Tip — $DATE" > .daily/tips.md
+          echo "" >> .daily/tips.md
+          echo "$TIP" >> .daily/tips.md
+          echo "" >> .daily/tips.md
+          echo "*Updated: $TIMESTAMP*" >> .daily/tips.md
+
+      - name: Commit and push
+        run: |
+          git add .daily/
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            DATE=$(date "+%Y-%m-%d")
+            git commit -m "chore(daily): log activity for $DATE"
+            git push
+          fi
