@@ -34,3 +34,7 @@ This file tracks daily activity and provides useful development tips.
 ## Thursday, 2026-04-09
 - Logged at: 2026-04-09 10:17:16 UTC
 - Tip: Write commit messages in the imperative mood.
+
+## Friday, 2026-04-10
+- Logged at: 2026-04-10 10:11:50 UTC
+- Tip: 'git log --oneline --graph' gives a nice visual history.
