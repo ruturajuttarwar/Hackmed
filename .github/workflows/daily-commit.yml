@@ -22,8 +22,8 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "ruturajuttarwar"
+          git config user.email "ruturajuttarwar024@gmail.com"
 
       - name: Create daily log entry
         run: |
