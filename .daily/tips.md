@@ -1,5 +1,5 @@
-# Today's Tip — 2026-04-14
+# Today's Tip — 2026-04-15
 
-Take breaks. Your brain solves problems in the background.
+Use 'git stash' to temporarily shelve changes.
 
-*Updated: 2026-04-14 10:20:13 UTC*
+*Updated: 2026-04-15 10:21:00 UTC*
