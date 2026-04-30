@@ -1,5 +1,5 @@
-# Today's Tip — 2026-04-29
+# Today's Tip — 2026-04-30
 
-Use 'git stash' to temporarily shelve changes.
+Write commit messages in the imperative mood.
 
-*Updated: 2026-04-29 11:00:08 UTC*
+*Updated: 2026-04-30 10:59:17 UTC*
