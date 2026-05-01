@@ -1,5 +1,5 @@
-# Today's Tip — 2026-04-30
+# Today's Tip — 2026-05-01
 
-Write commit messages in the imperative mood.
+'git log --oneline --graph' gives a nice visual history.
 
-*Updated: 2026-04-30 10:59:17 UTC*
+*Updated: 2026-05-01 10:26:25 UTC*
