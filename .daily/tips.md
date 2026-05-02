@@ -1,5 +1,5 @@
-# Today's Tip — 2026-05-01
+# Today's Tip — 2026-05-02
 
-'git log --oneline --graph' gives a nice visual history.
+Prefer small, focused commits over large monolithic ones.
 
-*Updated: 2026-05-01 10:26:25 UTC*
+*Updated: 2026-05-02 10:02:24 UTC*
