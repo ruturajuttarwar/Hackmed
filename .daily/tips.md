@@ -1,5 +1,5 @@
-# Today's Tip — 2026-05-02
+# Today's Tip — 2026-05-03
 
-Prefer small, focused commits over large monolithic ones.
+Use 'git reflog' to recover lost commits.
 
-*Updated: 2026-05-02 10:02:24 UTC*
+*Updated: 2026-05-03 10:10:48 UTC*
