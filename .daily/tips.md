@@ -1,5 +1,5 @@
-# Today's Tip — 2026-05-03
+# Today's Tip — 2026-05-04
 
-Use 'git reflog' to recover lost commits.
+Document the 'why' in comments, not the 'what'.
 
-*Updated: 2026-05-03 10:10:48 UTC*
+*Updated: 2026-05-04 11:09:04 UTC*

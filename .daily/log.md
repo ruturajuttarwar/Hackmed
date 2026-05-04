@@ -134,3 +134,7 @@ This file tracks daily activity and provides useful development tips.
 ## Sunday, 2026-05-03
 - Logged at: 2026-05-03 10:10:48 UTC
 - Tip: Use 'git reflog' to recover lost commits.
+
+## Monday, 2026-05-04
+- Logged at: 2026-05-04 11:09:04 UTC
+- Tip: Document the 'why' in comments, not the 'what'.
