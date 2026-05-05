@@ -1,5 +1,5 @@
-# Today's Tip — 2026-05-04
+# Today's Tip — 2026-05-05
 
-Document the 'why' in comments, not the 'what'.
+Take breaks. Your brain solves problems in the background.
 
-*Updated: 2026-05-04 11:09:04 UTC*
+*Updated: 2026-05-05 10:50:17 UTC*
